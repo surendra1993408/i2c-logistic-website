@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contact · I2C Logistic</title>
+<meta name="description" content="Call, WhatsApp or email I2C Logistic for a free quote to import from China to India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+<div id="site-header"></div>
+
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></nav>
+    <h1>Talk to a real person</h1>
+    <p>Call, WhatsApp or email us, or fill in the form below for a written quotation. We reply within one business day.</p>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap contact-cards">
+    <div class="cc-card"><span class="eyebrow">Call</span><strong data-phone></strong><span data-hours></span><a class="btn btn-yellow" data-tel href="#">Call now</a></div>
+    <div class="cc-card"><span class="eyebrow">WhatsApp</span><strong data-phone></strong><span>Send photos, invoices and packing lists</span><a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener">Open WhatsApp</a></div>
+    <div class="cc-card"><span class="eyebrow">Email</span><strong data-email></strong><span>For documents and formal quotes</span><a class="btn btn-ghost" data-mailto href="#">Write an email</a></div>
+    <div class="cc-card"><span class="eyebrow">Office</span><strong><address data-address style="font-style:normal"></address></strong><span>Visits by appointment</span><a class="btn btn-ghost" id="map-link" href="https://www.google.com/maps" target="_blank" rel="noopener">Open in Maps</a></div>
+  </div>
+</section>
+
+<section class="block" id="quote" style="padding-top:0;scroll-margin-top:110px">
+  <div class="wrap quote-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Free quotation</span>
+        <h2>Tell us what you're importing</h2>
+        <p>The more you share, the more exact your quote. A packing list and invoice let us quote the full landed cost, including duty.</p>
+      </div>
+      <ul class="checks" style="grid-template-columns:1fr;margin-top:24px">
+        <li><div><strong>Reply within one business day</strong><span>Monday to Saturday</span></div></li>
+        <li><div><strong>Price in rupees</strong><span>Freight, duty and delivery broken down line by line</span></div></li>
+        <li><div><strong>No obligation</strong><span>A quote costs nothing and commits you to nothing</span></div></li>
+      </ul>
+    </div>
+
+    <form class="card" id="quote-form" novalidate>
+      <div class="field"><label for="q-name">Your name</label><input id="q-name" autocomplete="name" placeholder="Rahul Sharma" required></div>
+      <div class="field"><label for="q-phone">Mobile number</label><input id="q-phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10 digits" required></div>
+      <div class="field"><label for="q-item">Item name</label><input id="q-item" placeholder="e.g. LED strip lights" required></div>
+      <div class="field"><label for="q-service">Service needed</label><select id="q-service"></select></div>
+      <div class="field"><label for="q-city">Delivery city</label><input id="q-city" placeholder="e.g. Pune"></div>
+      <div class="field"><label for="q-value">Invoice value <span>(USD or ₹)</span></label><input id="q-value" placeholder="e.g. $3,500"></div>
+      <div class="field full"><label for="q-mode">Shipping mode</label>
+        <select id="q-mode"><option>Not sure, suggest one</option><option>Sea (cheaper, ~30 days)</option><option>Air (faster, ~7–10 days)</option></select></div>
+
+      <div class="cbm" aria-label="CBM calculator">
+        <span class="t">Don't know your CBM? Work it out from one carton</span>
+        <div class="field"><label for="c-l">Length cm</label><input id="c-l" type="number" min="0" value="60"></div>
+        <div class="field"><label for="c-w">Width cm</label><input id="c-w" type="number" min="0" value="40"></div>
+        <div class="field"><label for="c-h">Height cm</label><input id="c-h" type="number" min="0" value="40"></div>
+        <div class="field"><label for="c-n">Cartons</label><input id="c-n" type="number" min="0" value="50"></div>
+        <output id="c-out" for="c-l c-w c-h c-n">4.80 CBM</output>
+      </div>
+
+      <button class="btn btn-yellow" type="submit">Request my quotation</button>
+      <div class="result" id="q-result" hidden>
+        <strong>Your request is ready to send.</strong>
+        <span>Tap below to send these details to our team on WhatsApp. We reply within one business day.</span>
+        <a class="btn btn-wa" id="q-send" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+      </div>
+      <p class="form-foot">By sending, you agree to our <a href="privacy-policy.html">privacy policy</a>.</p>
+    </form>
+  </div>
+</section>
+
+<section class="block tight" style="padding-top:0">
+  <div class="wrap split">
+    <div class="sec-head"><span class="eyebrow">Business details</span><h2>Registered and insured</h2></div>
+    <div class="table-wrap">
+      <table style="min-width:0">
+        <tbody>
+          <tr><td>Business name</td><td data-legal></td></tr>
+          <tr><td>GSTIN</td><td class="num" data-gstin></td></tr>
+          <tr><td>Import Export Code</td><td class="num" data-iec></td></tr>
+          <tr><td>Working hours</td><td data-hours></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+  // Point "Open in Maps" at the office address from CONFIG
+  document.getElementById("map-link").href = "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(CONFIG.address.replace(/<br\s*\/?>/g, ", "));
+</script>
+</body>
+</html>
