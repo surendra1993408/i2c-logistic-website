@@ -4,12 +4,12 @@
 const CONFIG = {
   brand: "I2C Logistic",
   legalName: "I2C Logistic",                 // registered business name for legal pages
-  phone: "+91 90000 00000",                  // shown on the page
-  whatsapp: "919000000000",                  // country code + number, digits only
+  phone: "+91 92892 69144",                  // shown on the page
+  whatsapp: "919289269144",                  // country code + number, digits only
   email: "info@i2clogistic.com",
   address: "Kirti Nagar,<br>New Delhi – 110015",
   city: "New Delhi",                          // courts' jurisdiction in Terms
-  hours: "Mon–Sat, 10:00 am – 7:00 pm IST",
+  hours: "Mon–Sat, 10:00 am – 6:00 pm IST",
   gstin: "GSTIN to be added",
   iec: "IEC to be added",
   updated: "4 October 2026"                  // "last updated" date on legal pages
